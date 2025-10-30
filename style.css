@@ -76,6 +76,13 @@ a:hover{ text-decoration: underline }
   text-align:center;
 }
 .hero h1{ font-size:var(--step-3); line-height:1.1; margin:0 0 10px }
+.hero-title{ 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 0 10px;
+  display: block;
+  margin-inline: auto;
+}
 .lead{ font-size:var(--step-1); color:var(--muted); max-width:60ch; margin-inline:auto }
 .cta{ margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
 
@@ -154,7 +161,7 @@ a:hover{ text-decoration: underline }
   min-height: 100vh;
   overflow-x: hidden;
   background-color: var(--bg);
-  background-image: url('./media/water-drop-background-tile-2.jpg');
+  background-image: url('.media/water-drop-background-tile-2.jpg');
   background-size: auto;
   background-attachment: fixed;
   background-position: center;
