@@ -13,7 +13,7 @@ function setTheme(theme) {
   root.setAttribute('data-theme', theme);
   localStorage.setItem('sfn-theme', theme);
   themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
-  themeToggle.textContent = theme === 'dark' ? '🌚' : '🌝';
+  themeToggle.textContent = theme === 'dark' ? '🌝' : '🌚';
 }
 
 // Initialize correct emoji on load
