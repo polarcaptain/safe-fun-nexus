@@ -68,15 +68,20 @@
                 </article>
             </section>
 
-            <!-- Live demo / widget -->
+            <!-- Pac-Man Game -->
             <section class="play container">
-                <h2>Try a quick widget</h2>
-                <form class="widget" aria-label="Greeting generator" onsubmit="return false;">
-                    <label for="nameInput">Your name</label>
-                    <input id="nameInput" type="text" placeholder="e.g., Tyrone" autocomplete="name" />
-                    <button id="greetBtn" class="btn">Greet me</button>
-                    <output id="greetOut" role="status" aria-live="polite"></output>
-                </form>
+                <h2>Play Pac-Man!</h2>
+                <div class="game-container">
+                    <div class="game-info">
+                        <div class="score">Score: <span id="score">0</span></div>
+                        <div class="lives">Lives: <span id="lives">3</span></div>
+                    </div>
+                    <canvas id="pacmanGame" width="560" height="620"></canvas>
+                    <div class="game-controls">
+                        <p>Use Arrow Keys to move</p>
+                        <button id="startGame" class="btn lg">Start Game</button>
+                    </div>
+                </div>
             </section>
         </main>
 
