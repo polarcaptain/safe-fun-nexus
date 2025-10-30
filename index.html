@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Safe Fun Nexus</title>
-  <meta name="description" content="A playful, safe space to experiment on the web." />
-  <meta property="og:title" content="Safe Fun Nexus" />
-  <meta property="og:description" content="A playful, safe space to experiment on the web." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230070f3'/%3E%3Cpath d='M40 68l12 12 36-36' stroke='white' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safe Fun Nexus</title>
+    <meta name="description" content="A playful, safe space to experiment on the web." />
+    <meta property="og:title" content="Safe Fun Nexus" />
+    <meta property="og:description" content="A playful, safe space to experiment on the web." />
+    <meta property="og:type" content="website" />
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230070f3'/%3E%3Cpath d='M40 68l12 12 36-36' stroke='white' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="parallax-bg">
+        <header class="site-header">
+            <nav class="nav container" aria-label="Primary">
+                <a class="brand" href="#">
+                    <!-- Inline SVG logo so you don't need files -->
+                    <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="currentColor" />
+                                <stop offset="1" stop-color="currentColor" stop-opacity=".6" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="4" />
+                        <path d="M20 34l8 8 18-18" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+                    </svg>
+                    <span>Safe&nbsp;Fun&nbsp;Nexus</span>
+                </a>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#">
-        <!-- Inline SVG logo so you don't need files -->
-        <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="currentColor" />
-              <stop offset="1" stop-color="currentColor" stop-opacity=".6" />
-            </linearGradient>
-          </defs>
-          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="4"/>
-          <path d="M20 34l8 8 18-18" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-        <span>Safe&nbsp;Fun&nbsp;Nexus</span>
-      </a>
+                <div class="nav-actions">
+                    <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle theme">🌓</button>
+                    <a class="btn" href="https://github.com/polarcaptain/safe-fun-nexus" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </nav>
+        </header>
 
-      <div class="nav-actions">
-        <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle theme">🌓</button>
-        <a class="btn" href="https://github.com/polarcaptain/safe-fun-nexus" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </nav>
-  </header>
+        <main id="main">
+            <!-- Hero -->
+            <section class="hero container">
+                <h1>Build safe. Ship fun. ✨</h1>
+                <p class="lead">
+                    N WORD.
+                </p>
+                <div class="cta">
+                    <button id="partyBtn" class="btn lg">Celebrate</button>
+                    <a class="btn lg outline" href="#features">Explore Features</a>
+                </div>
+            </section>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero container">
-      <h1>Build safe. Ship fun. ✨</h1>
-      <p class="lead">
-        N WORD.
-      </p>
-      <div class="cta">
-        <button id="partyBtn" class="btn lg">Celebrate</button>
-        <a class="btn lg outline" href="#features">Explore Features</a>
-      </div>
-    </section>
+            <!-- Features -->
+            <section id="features" class="features container">
+                <article class="card">
+                    <h3>🚀 Instant Deploy</h3>
+                    <p>Push to <strong>main</strong> and Vercel takes care of the rest. Rollbacks included.</p>
+                </article>
+                <article class="card">
+                    <h3>🧩 Zero Build</h3>
+                    <p>Plain HTML, CSS, and a sprinkle of JS. No bundlers or frameworks required.</p>
+                </article>
+                <article class="card">
+                    <h3>👯 Made for Collab</h3>
+                    <p>PRs, previews, and shared ownership. Learn together, ship together.</p>
+                </article>
+            </section>
 
-    <!-- Features -->
-    <section id="features" class="features container">
-      <article class="card">
-        <h3>🚀 Instant Deploy</h3>
-        <p>Push to <strong>main</strong> and Vercel takes care of the rest. Rollbacks included.</p>
-      </article>
-      <article class="card">
-        <h3>🧩 Zero Build</h3>
-        <p>Plain HTML, CSS, and a sprinkle of JS. No bundlers or frameworks required.</p>
-      </article>
-      <article class="card">
-        <h3>👯 Made for Collab</h3>
-        <p>PRs, previews, and shared ownership. Learn together, ship together.</p>
-      </article>
-    </section>
+            <!-- Live demo / widget -->
+            <section class="play container">
+                <h2>Try a quick widget</h2>
+                <form class="widget" aria-label="Greeting generator" onsubmit="return false;">
+                    <label for="nameInput">Your name</label>
+                    <input id="nameInput" type="text" placeholder="e.g., Tyrone" autocomplete="name" />
+                    <button id="greetBtn" class="btn">Greet me</button>
+                    <output id="greetOut" role="status" aria-live="polite"></output>
+                </form>
+            </section>
+        </main>
 
-    <!-- Live demo / widget -->
-    <section class="play container">
-      <h2>Try a quick widget</h2>
-      <form class="widget" aria-label="Greeting generator" onsubmit="return false;">
-        <label for="nameInput">Your name</label>
-        <input id="nameInput" type="text" placeholder="e.g., Tyrone" autocomplete="name" />
-        <button id="greetBtn" class="btn">Greet me</button>
-        <output id="greetOut" role="status" aria-live="polite"></output>
-      </form>
-    </section>
-  </main>
+        <footer class="site-footer container">
+            <p>Made with ❤️ by Tyrone &amp; Friend • <a href="https://github.com/polarcaptain/safe-fun-nexus" target="_blank" rel="noopener">View source</a></p>
+        </footer>
+    </div>
 
-  <footer class="site-footer container">
-    <p>Made with ❤️ by Tyrone &amp; Friend • <a href="https://github.com/polarcaptain/safe-fun-nexus" target="_blank" rel="noopener">View source</a></p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
