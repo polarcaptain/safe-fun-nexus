@@ -75,6 +75,21 @@ a:hover{ text-decoration: underline }
   padding: clamp(48px, 7vw, 96px) 0;
   text-align:center;
 }
+
+/* Main Content Container with Border */
+.main-content-container {
+  max-width: 1500px;
+  width: 100%;
+  margin: -80px auto 0;
+  padding: 100px 40px 60px;
+  background-color: rgba(0, 100, 0, 0.3);
+  position: relative;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-image: url('./media/sidestrip.gif') 20 repeat;
+  border-image-slice: 20 fill;
+}
+
 .hero h1{ font-size:var(--step-3); line-height:1.1; margin:0 0 10px }
 .hero-title{ 
   max-width: 100%; 
@@ -227,18 +242,33 @@ a:hover{ text-decoration: underline }
     top: 20px;
     left: 0;
     right: 0;
-    display: flex;
-    gap: 5px;
     z-index: 1000;
     pointer-events: none;
-    height: min(100px, 12vh);
-    padding: 0 5px;
+    height: min(150px, 15vh);
+    overflow: hidden;
+}
+
+.fixed-header-gifs .scroll-container {
+    display: flex;
+    gap: 10px;
+    animation: scrollLeft 20s linear infinite;
+    width: fit-content;
 }
 
 .fixed-header-gifs img {
-    flex: 1;
-    height: 100%;
+    height: 150px;
+    width: auto;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Fixed Footer GIFs */
@@ -247,41 +277,57 @@ a:hover{ text-decoration: underline }
     bottom: 20px;
     left: 0;
     right: 0;
-    display: flex;
-    gap: 5px;
     z-index: 1000;
     pointer-events: none;
-    height: min(100px, 12vh);
-    padding: 0 5px;
+    height: min(150px, 15vh);
+    overflow: hidden;
+}
+
+.fixed-footer-gifs .scroll-container {
+    display: flex;
+    gap: 10px;
+    animation: scrollFooterRight 20s linear infinite;
+    width: fit-content;
 }
 
 .fixed-footer-gifs img {
-    flex: 1;
-    height: 100%;
+    height: 150px;
+    width: auto;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes scrollFooterRight {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
 }
 
 /* Special Sections - Side by Side */
 .special-sections {
     margin: 60px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 20px;
+    max-width: 100%;
 }
 
 .cool-container,
 .proven-container,
 .subliminals-container {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 40px;
+    border-radius: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,7 +340,7 @@ a:hover{ text-decoration: underline }
 }
 
 .proven-container {
-    background-image: url('./media/proven.png');
+    background-image: url('./media/proven.jpg');
 }
 
 .subliminals-container {
@@ -304,15 +350,21 @@ a:hover{ text-decoration: underline }
 .cool-title,
 .proven-title,
 .subliminals-title {
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
     padding: 20px;
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
-    font-size: clamp(20px, 3vw, 36px);
+    font-size: clamp(20px, 1.5rem, 36px);
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
     transform: rotate(-2deg);
+}
+
+@media (max-width: 1400px) {
+    .special-sections {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cool-title {
@@ -328,6 +380,23 @@ a:hover{ text-decoration: underline }
 .subliminals-title {
     color: #FF1493;
     text-shadow: 3px 3px 0 #00FFFF, -3px -3px 0 #FFFF00;
+}
+
+@media (max-width: 1200px) {
+    .special-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .cool-title,
+    .proven-title,
+    .subliminals-title {
+        font-size: clamp(20px, 3vw, 36px);
+    }
+    
+    .enter-btn {
+        padding: 15px 50px;
+        font-size: 20px;
+    }
 }
 
 .enter-btn {
