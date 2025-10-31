@@ -110,16 +110,22 @@ a:hover{ text-decoration: underline }
     justify-content: center;
 }
 
+.gif-banner-container {
+    background: linear-gradient(135deg, #ffff00, #ff8800);
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    max-width: 1400px;
+}
+
 .gif-row {
     display: flex;
     gap: 5px;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ffff00, #ff8800);
-    border-radius: 15px;
-    padding: 15px;
-    width: fit-content;
-    max-width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .gif-row img {
@@ -128,6 +134,69 @@ a:hover{ text-decoration: underline }
     object-fit: contain;
     flex-shrink: 1;
     min-width: 0;
+}
+
+/* Text and Image Sections */
+.text-image-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.text-image-row {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    align-items: center;
+}
+
+.text-image-row.reverse {
+    grid-template-columns: 300px 1fr;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.text-content h2 {
+    font-size: var(--step-2);
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+.text-content p {
+    font-size: var(--step-0);
+    line-height: 1.6;
+    color: #000;
+    margin: 0;
+}
+
+.image-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .text-image-row,
+    .text-image-row.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-image-row.reverse .image-content {
+        order: 2;
+    }
+    
+    .text-image-row.reverse .text-content {
+        order: 1;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -320,7 +389,7 @@ a:hover{ text-decoration: underline }
 .proven-container,
 .subliminals-container {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/3;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -350,10 +419,10 @@ a:hover{ text-decoration: underline }
 .cool-title,
 .proven-title,
 .subliminals-title {
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
     padding: 20px;
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
-    font-size: clamp(20px, 1.5rem, 36px);
+    font-size: clamp(20px, 2.5vw, 36px);
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -361,7 +430,7 @@ a:hover{ text-decoration: underline }
     transform: rotate(-2deg);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .special-sections {
         grid-template-columns: 1fr;
     }
