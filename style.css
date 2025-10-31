@@ -111,11 +111,11 @@ a:hover{ text-decoration: underline }
 }
 
 .gif-banner-container {
-    background: linear-gradient(135deg, #ffff00, #ff8800);
+    background: linear-gradient(135deg, #ffffff, #b8b9ff);
     border-radius: 15px;
     padding: 15px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
 }
 
 .gif-row {
@@ -129,7 +129,7 @@ a:hover{ text-decoration: underline }
 }
 
 .gif-row img {
-    height: 210px;
+    height: 260px;
     width: auto;
     object-fit: contain;
     flex-shrink: 1;
@@ -419,21 +419,16 @@ a:hover{ text-decoration: underline }
 .cool-title,
 .proven-title,
 .subliminals-title {
-    margin: 0 0 40px 0;
-    padding: 20px;
+    margin: 0 0 20px 0;
+    padding: 10px;
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
-    font-size: clamp(20px, 2.5vw, 36px);
+    font-size: clamp(16px, 1.5vw, 28px);
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transform: rotate(-2deg);
-}
-
-@media (max-width: 1200px) {
-    .special-sections {
-        grid-template-columns: 1fr;
-    }
+    line-height: 1.2;
 }
 
 .cool-title {
@@ -468,18 +463,17 @@ a:hover{ text-decoration: underline }
     }
 }
 
-.enter-btn {
-    padding: 20px 60px;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #39FF14;
-    color: #000;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
+.enter-link {
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
-.enter-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #39FF14;
+.enter-link:hover {
+    transform: scale(1.1);
 }
+
+.enter-gif {
+    width: clamp(100px, 15vw, 200px);
+    height: auto;
+    display: block;
+}s
