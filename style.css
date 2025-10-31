@@ -389,7 +389,7 @@ a:hover{ text-decoration: underline }
 .proven-container,
 .subliminals-container {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -476,4 +476,4 @@ a:hover{ text-decoration: underline }
     width: clamp(100px, 15vw, 200px);
     height: auto;
     display: block;
-}s
+}
